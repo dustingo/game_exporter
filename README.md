@@ -5,7 +5,7 @@
   1.摆脱繁杂(更专业)的指标  
   2.专注于游戏运维中要关注的指标  
   3.便于监控游戏进程  
-  4.便于增加collector,目前只有cpu和游戏进程监控，其他必要指标正在过滤中
+  4.便于增加collector,目前只有cpu和游戏进程监控，其他必要指标正在过滤中。
 
 - 使用:    
 ./game_exporter --config.path=gameprocess.yaml  
