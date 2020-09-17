@@ -17,7 +17,7 @@ gameprocess.yaml 为游戏进程配置文件
 name为进程名  
 cmdline为定位进程所需的字段，最大只能两条
 - 增加新的collector:  
-创建新的collector只需要在collector中实现此接口即可
+创建新的collector只需要在collector中实现此接口并在game_exporter.go中注册即可
 ```golang
 type Scraper interface {
 	Name() string
