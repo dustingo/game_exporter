@@ -1,0 +1,19 @@
+[Unit]
+Description= game_exporter for game ops
+After=network.target
+
+[Service]
+
+Type=simple
+
+ExecStart=/usr/local/game_exporter/game_exporter --config.path=/usr/local/game_exporter/gameprocess.yaml
+
+ExecReload=/bin/kill -s HUP $MAINPID
+
+ExecStop=/bin/kill -s QUIT $MAINPID
+
+PrivateTmp=true
+
+[Install]
+
+WantedBy=multi-user.target

@@ -1,0 +1,59 @@
+process_names:
+  - name: "gs10201"
+    cmdline:
+    - 'gs10201'
+    - '/export/server/gs/cmd/gs'
+  - name: "gs10202"
+    cmdline:
+    - 'gs10202'
+  - name: "gs10203"
+    cmdline:
+    - 'gs10203'
+  - name: "gs10204"
+    cmdline:
+    - 'gs10204'
+  - name: "gs10205"
+    cmdline:
+    - 'gs10205'
+  - name: "gs10206"
+    cmdline:
+    - 'gs10206'
+  - name: "gs10207"
+    cmdline:
+    - 'gs10207'
+  - name: "gs10208"
+    cmdline:
+    - 'gs10208'
+  - name: "fs10221"
+    cmdline:
+    - 'fs10221'
+  - name: "fs10222"
+    cmdline:
+    - 'fs10222'
+  - name: "fs10223"
+    cmdline:
+    - 'fs10223'
+  - name: "fs10224"
+    cmdline:
+    - 'fs10224'
+  - name: "fs10225"
+    cmdline:
+    - 'fs10225'
+  - name: "fs10226"
+    cmdline:
+    - 'fs10226'
+  - name: "fs10227"
+    cmdline:
+    - 'fs10227'
+  - name: "fs10228"
+    cmdline:
+    - 'fs10228'
+  - name: "gate10291"
+    cmdline:
+    - 'gate10291'
+  - name: "gate10292"
+    cmdline:
+    - 'gate10292'
+  - name: "launch"
+    cmdline:
+    - '-app.pid=launch-game.pid'
