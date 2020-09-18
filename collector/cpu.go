@@ -9,9 +9,9 @@ import (
 )
 
 type cpuCollector struct {
-	fs           procfs.FS
-	cpu          *prometheus.Desc
-	cpuInfo      *prometheus.Desc
+	fs  procfs.FS
+	cpu *prometheus.Desc
+	//cpuInfo      *prometheus.Desc
 	cpuStats     []procfs.CPUStat
 	logger       log.Logger
 	cpuStatMutex sync.Mutex
@@ -42,10 +42,11 @@ func (ScrapeCpuInfo) Scrape(ch chan<- prometheus.Metric, logger log.Logger) erro
 	var c = &cpuCollector{
 		fs:     fs,
 		logger: logger,
-		cpuInfo: prometheus.NewDesc("info",
-			"CPU information from /proc/cpuinfo.",
-			[]string{"package", "core", "cpu", "vendor", "family", "model", "model_name", "microcode", "stepping", "cachesize"}, nil,
-		),
+		// dont need it
+		//cpuInfo: prometheus.NewDesc("info",
+		//	"CPU information from /proc/cpuinfo.",
+		//	[]string{"package", "core", "cpu", "vendor", "family", "model", "model_name", "microcode", "stepping", "cachesize"}, nil,
+		//),
 		cpu: prometheus.NewDesc(
 			prometheus.BuildFQName(namespace, linuxCpu, "seconds_total"),
 			"Seconds the CPUs spent in each mode.",
