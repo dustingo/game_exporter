@@ -12,6 +12,7 @@ import (
 var (
 	rootfsPath = "/"
 	procPath   = "/proc"
+	sysPath    = "/sys"
 )
 
 func rootfsFilePath(name string) string {

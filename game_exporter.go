@@ -41,6 +41,7 @@ var scrapers = map[collector.Scraper]bool{
 	collector.ScrapeGameProcess{}:    true,
 	collector.ScrapeCpuInfo{}:        true,
 	collector.ScrapeFilesystemInfo{}: true,
+	collector.ScrapeMemoryInfo{}:     true,
 }
 
 func init() {

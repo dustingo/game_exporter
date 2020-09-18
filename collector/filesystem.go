@@ -16,7 +16,7 @@ import (
 // 忽略的挂载点和系统类型
 const (
 	defIgnoredMountPoints = "^/(dev|proc|sys|var/lib/docker/.+)($|/)"
-	defIgnoredFSTypes     = "^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|tmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$"
+	defIgnoredFSTypes     = "^(autofs|binfmt_misc|rootfs|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|tmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$"
 	filesystem            = "filesystem_info"
 )
 
@@ -131,7 +131,7 @@ func getStats() ([]filesystemStats, error) {
 			//fmt.Println("已忽略此类型", labels.fsType)
 			continue
 		}
-		fmt.Printf("device:%s, mountpoiont:%s, fstype:%s\n", labels.device, labels.mountPoint, labels.fsType)
+		//fmt.Printf("device:%s, mountpoiont:%s, fstype:%s\n", labels.device, labels.mountPoint, labels.fsType)
 		buf := new(unix.Statfs_t)
 		err = unix.Statfs(rootfsFilePath(labels.mountPoint), buf)
 		//var ro float64
