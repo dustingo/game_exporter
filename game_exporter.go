@@ -38,8 +38,9 @@ var (
 
 // scraper list all possible collection methods
 var scrapers = map[collector.Scraper]bool{
-	collector.ScrapeGameProcess{}: true,
-	collector.ScrapeCpuInfo{}:     true,
+	collector.ScrapeGameProcess{}:    true,
+	collector.ScrapeCpuInfo{}:        true,
+	collector.ScrapeFilesystemInfo{}: true,
 }
 
 func init() {
