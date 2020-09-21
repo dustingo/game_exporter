@@ -25,7 +25,7 @@ type Info struct {
 
 const (
 	// subsystem
-	gameProcess = "game_process_num"
+	gameProcess = "game_linux_process_num"
 )
 
 // GetConfig 解析yaml，返回myconfig结构体指针

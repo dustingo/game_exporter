@@ -15,7 +15,7 @@ import (
 var (
 	reParens   = regexp.MustCompile(`\((.*)\)`)
 	memInfo    = map[string]float64{}
-	memoryinfo = "memory_info"
+	memoryinfo = "linux_memory_info"
 )
 
 type ScrapeMemoryInfo struct{}

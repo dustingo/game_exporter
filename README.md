@@ -42,10 +42,10 @@ func() time.Time { return time.Now().UTC() },
 修改为
 func() time.Time { return time.Now().Local() },
 ```
-- 各指标
+- 各指标metric
    - cpu: game_linux_cpu_info_seconds_total
    - mem: game_memory_info_seconds_total
-   - filesystem: game_filesystem_info_total_free
+   - filesystem: game_linux_filesystem_info_total_free
    - network: game_linux_net_info_receive_bytes_total|game_linux_net_info_transmit_bytes_total
    - laodavg: game_linux_load_avg1|game_linux_load_avg5|game_linux_load_avg15
-   - process: game_process_num
+   - process: game_linux_process_num

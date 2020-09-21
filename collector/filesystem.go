@@ -17,7 +17,7 @@ import (
 const (
 	defIgnoredMountPoints = "^/(dev|proc|sys|var/lib/docker/.+)($|/)"
 	defIgnoredFSTypes     = "^(autofs|binfmt_misc|rootfs|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|tmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$"
-	filesystem            = "filesystem_info"
+	filesystem            = "linux_filesystem_info"
 )
 
 // 标签结构体
