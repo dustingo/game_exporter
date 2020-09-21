@@ -49,3 +49,7 @@ func() time.Time { return time.Now().Local() },
    - network: game_linux_net_info_receive_bytes_total|game_linux_net_info_transmit_bytes_total
    - laodavg: game_linux_load_avg1|game_linux_load_avg5|game_linux_load_avg15
    - process: game_linux_process_num
+   
+ - 特殊metric   
+    game_exporter_last_scrape_error 0  
+    此指标为game_exporter下collector是否成功执行的指标。默认为0，失败一次+1
